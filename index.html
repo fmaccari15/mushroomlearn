@@ -17,6 +17,30 @@
   <body>
 
     <h1 id="me">Felipe Reis Maccari</h1>
+  
+    <button id="ASong" onClick="playPause()">
+      <audio
+        src="milvezes.mp3"
+        autoplay
+        loop
+      ></audio>
+      Brazilian anthem
+    </button>
+    
+    <script>
+      var aud = document.getElementById("ASong").children[0];
+      var isPlaying = false;
+      aud.pause();
+    
+      function playPause() {
+        if (isPlaying) {
+          aud.pause();
+        } else {
+          aud.play();
+        }
+        isPlaying = !isPlaying;
+      }
+    </script>
 
     <h2 id="aboutme-section"> About me </h2>
     <img id="felipe" src="me.png" style="height:200px; border-radius:50%"
